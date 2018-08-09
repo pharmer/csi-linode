@@ -26,7 +26,8 @@ metadata:
   name: linode
   namespace: kube-system
 stringData:
-  access-token: "deadbeefab1e1ead__REPLACE_ME____deadbeefab1e1ead"
+  token: "deadbeefab1e1ead__REPLACE_ME____deadbeefab1e1ead"
+  region: "us-east"
 ```
 
 and create the secret using kubectl:
@@ -48,7 +49,7 @@ linode          Opaque                                1         18h
 #### 2. Deploy the CSI plugin and sidecars:
 
 Before you continue, be sure to checkout to a [tagged
-release](https://github.com/displague/csi-linode/releases). For
+release](https://github.com/pharmer/csi-linode/releases). For
 example, to use the version `v0.0.1` you can execute the following command:
 
 ```sh
